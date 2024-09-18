@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Hello jquery</title>
+	<link rel="stylesheet" href="style.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+	<img class="foto" src="bg.PNG" alt="">
+	<div class="container">
+		<h1 id="heading">Hello World</h1>
+		<button id="change-button">Pencet</button>
+	</div>
+	<img class="foto" src="bg.PNG" alt="">
+
+	<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+	<script>
+		const text = [
+		"Nama saya Abrar loh",
+		"Iya lagi",
+		"Follow @Kiddos.wrld ya ges ya disitu ada banyak fashion item bagus dan gokil",
+		];
+		let index = 0;
+
+		$("#change-button").click(() => {
+        $("h1").text(text[index]);
+        index = (index + 1) % text.length;
+      });	
+	</script>
+</body>
+</html>
